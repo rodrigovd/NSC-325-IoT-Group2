@@ -25,7 +25,7 @@ def mac():
 	    # for each response, append ip and mac address to `clients` list
 	    clients.append({'ip': received.psrc, 'mac': received.hwsrc})
 
-	# print clients
+	# print(clients)
 	# print("Available devices in the network:")
 	# print("IP" + " "*18+"MAC")
 	for client in clients:

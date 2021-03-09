@@ -26,4 +26,4 @@ def find_gateway():
                     return item
                else:
                     pass
-find_gateway()
+# find_gateway()

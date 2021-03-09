@@ -1,4 +1,4 @@
-name: LANSCAN
+name: network
 channels:
   - defaults
 dependencies:

@@ -85,8 +85,11 @@ def get_mac_details(mac_address):
     return response.content.decode() 
   
 # Driver Code 
-def main():
+def main(dummy_mac=[]):
         macs = mac()
+        if dummy_mac != []:
+          macs = dummy_mac
+
         # print("IP                  MAC                       Vendor Name")
         for k in macs.keys():
             try:
@@ -98,4 +101,5 @@ def main():
                 print('Something went wrong')
             time.sleep(2)
 
-# main()
+
+main()

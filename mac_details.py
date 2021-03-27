@@ -34,10 +34,10 @@ def get_vendor_details(url='http://standards-oui.ieee.org/oui/oui.csv'):
     df=pd.read_csv(url,dtype=str)
     return df
     
-def main_mac(Demo=True
+def main_mac(Demo=True, dummy= {}
             ): 
     if Demo:
-        macs={'192.168.0.1': '2c:99:24:30:de:18', '192.168.0.2': '34:d2:70:ac:66:c5', '192.168.0.7': '1c:bf:c0:0d:3f:89', '192.168.0.3': 'c0:d2:dd:0e:a4:25', '192.168.0.4': '76:9b:54:ba:7a:66', '192.168.0.252': '00:00:ca:01:02:03'}
+        macs= dummy
     else:
         macs = mac()
     dic = {}
@@ -87,7 +87,6 @@ def get_mac_details(mac_address):
 # Driver Code 
 def main():
         macs = mac()
-        # macs = {'192.168.0.1': '2c:99:24:30:de:18', '192.168.0.2': '34:d2:70:ac:66:c5', '192.168.0.7': '1c:bf:c0:0d:3f:89', '192.168.0.3': 'c0:d2:dd:0e:a4:25', '192.168.0.4': '76:9b:54:ba:7a:66', '192.168.0.252': '00:00:ca:01:02:03'}
         # print("IP                  MAC                       Vendor Name")
         for k in macs.keys():
             try:
